@@ -1,9 +1,9 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra');
 
 async function run() {
 const browser = await puppeteer.launch();
 const page = await browser.newPage();
-await page.goto('https://example.com');
+await page.goto('https://www.visualizemycode.com');
 
 await page.screenshot({ path: 'example.png', fullPage: true });
 
