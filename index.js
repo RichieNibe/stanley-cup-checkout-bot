@@ -15,7 +15,7 @@ async function addToCart(page) {
   const addToCartButton = await page.waitForSelector("#ProductSubmitButton-");
   await addToCartButton.click();
 
-  new Promise((resolve) => setTimeout(resolve, 2000));
+  new Promise((resolve) => setTimeout(resolve, 10000));
 
   await page.waitForSelector("button[name='checkout']");
   await page.evaluate(() => {
