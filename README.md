@@ -1,1 +1,1 @@
-# web-scraper
+# stanley-cup-checkout-bot
