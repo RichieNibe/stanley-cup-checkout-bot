@@ -18,6 +18,7 @@
   "homepage": "https://github.com/RichieNibe/web-scraper#readme",
   "dependencies": {
     "puppeteer": "^24.8.2",
+    "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2"
   }
 }
