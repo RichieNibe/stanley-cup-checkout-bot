@@ -27,21 +27,15 @@ async function addToCart(page) {
 
 async function checkOut(page) {
     await new Promise((resolve) => setTimeout(resolve, 2000));
-    const emailInput = await page.waitForSelector("#email");
-    await emailInput.type("tuvcxmaxsuutadmkac@xfavaj.com"); 
-    const firstNameInput = await page.waitForSelector("#TextField0");
-    await firstNameInput.type("John");
-    const lastNameInput = await page.waitForSelector("#TextField1");
-    await lastNameInput.type("Doe");
-    const addressInput = await page.waitForSelector("#shipping-address1");
-    await addressInput.type("2401 Elliott Ave");
-    const cityInput = await page.waitForSelector("#TextField4");
-    await cityInput.type("Seattle");
-    const phoneInput = await page.waitForSelector("#TextField6");
-    await phoneInput.type("2345678901");
+    await page.waitForSelector("#email");
+    await page.type("#email", "tuvcxmaxsuutadmkac@xfavaj.com");
+    await page.type("#TextField0", "John");
+    await page.type("#TextField1", "Doe");
+    await page.type("#shipping-address1", "2401 Elliott Ave");
+    await page.type("#TextField4", "Seattle");
+    await page.type("#TextField6", "2345678901");
     await page.select("select[name='zone']", "WA");
-    const zipCodeInput = await page.waitForSelector("#TextField5");
-    await zipCodeInput.type("98121");
+    await page.type("#TextField5", "98121");
 
     await new Promise((resolve) => setTimeout(resolve, 2000));
     const continueToShipping = await page.waitForSelector("button[type='submit']");
@@ -51,9 +45,6 @@ async function checkOut(page) {
     const continueToPayment = await page.waitForSelector("button[type='submit']");
     await continueToPayment.click();
 
-    const continueToPayment2 = await page.waitForSelector("button[type='submit']");
-    await continueToPayment2.click();
-    
     await fillPaymentInfo(page);
 }
 
@@ -66,9 +57,10 @@ async function fillPaymentInfo(page) {
     const cardCvcInput = await page.waitForSelector("#verification_value");
     await cardCvcInput.type(" 687", { delay: 1000 });
 
-    const payButton = await page.waitForSelector("button[type='submit']");
-    await payButton.click();
-    
+    const payNowButton = await page.waitForSelector("button[type='submit']");
+    await payNowButton.click();
+    console.log("Order was placed!");
+
 }
 
 
