@@ -29,7 +29,7 @@ A bot designed to automate the checkout process for Stanley Cup merchandise drop
 
 ## Usage
 
-1. rune ```node index.js```
+1. run ```node index.js```
 2. Watch the bot in action
 
 
