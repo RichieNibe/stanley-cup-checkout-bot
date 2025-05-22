@@ -36,7 +36,3 @@ A bot designed to automate the checkout process for Stanley Cup merchandise drop
 ## Disclaimer
 
 This project is for educational purposes only. Use responsibly and at your own risk. The author is not responsible for any misuse or violations of terms of service.
-
-## License
-
-MIT License
