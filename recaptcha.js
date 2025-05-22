@@ -24,22 +24,13 @@ async function solveRecaptcha(url, page) {
             console.log('g-response: '+gresponse);
             page.evaluate((gresponse) => {
                 document.getElementById('g-recaptcha-response').innerHTML = gresponse;
-                submit(page);
+                document.querySelector("#recaptcha-demo-submit").click();
             }, gresponse);
             
         })
         .catch(error => console.log('test received error '+error));
     
     
-}
-
-async function submit(page) {
-  await page.waitForSelector("#recaptcha-demo-submit");
-  await page.evaluate(() => {
-    document.querySelector("#recaptcha-demo-submit").click();
-  })
-
-
 }
 
 async function run() {
