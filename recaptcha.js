@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer-extra");
 const StealthPlugin = require('puppeteer-extra-plugin-stealth')
 const ac = require("@antiadmin/anticaptchaofficial");
-ac.setAPIKey('6629c482f7f1cd0f308664b4ec65bfcb');
+ac.setAPIKey('API_KEY');
 puppeteer.use(StealthPlugin())
 
 async function loadPage(url) {
